@@ -1,0 +1,39 @@
+name: AI Sentinel Auto-Blogger
+
+on:
+  schedule:
+    # 毎日UTC 23:30 (日本時間 朝 8:30) に自動実行（1個目のブログと重ならないように調整）
+    - cron: '30 23 * * *'
+  workflow_dispatch: # GitHub画面からの「手動実行」も許可する
+
+jobs:
+  run-sentinel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 新規記事をリポジトリへ保存する権限
+    
+    steps:
+      - name: リポジトリのチェックアウト
+        uses: actions/checkout@v4
+      
+      - name: Node.js のセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: 依存関係のインストール
+        working-directory: ./ai-sentinel
+        run: npm install
+      
+      - name: 🤖 AI Sentinel 実行 (情報収集・記事作成・配信)
+        working-directory: ./ai-sentinel
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: npx tsx src/index.ts
+      
+      - name: 📝 できた記事をGitHubへ自動保存 (Vercelデプロイ開始)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-post: Crypto & Web3 Trends - Today's Summary"
+          file_pattern: "src/content/blog/*.md ai-sentinel/db.json"
