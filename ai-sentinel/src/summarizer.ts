@@ -15,11 +15,11 @@ export async function summarizeArticles(articles: any[], niche: string, language
     console.log(`Summarizing: ${article.title.substring(0, 50)}...`);
     
     let attempts = 0;
-    let summaryText = "要紁E�E生�Eに失敗しました、E;
+    let summaryText = "要約の生成に失敗しました。";
 
     while (attempts < 5) { // 5 retries
       try {
-        await delay(60000); // Increased 60-second delay for absolute safety on free tier
+        await delay(60000); // 60s safety delay
 
         const prompt = `
           Summarize this article for a ${niche} enthusiast in ${language}.
@@ -41,7 +41,7 @@ export async function summarizeArticles(articles: any[], niche: string, language
         attempts++;
         if (error.status === 429 || error.message?.includes('429')) {
           console.warn(`[429] Rate limit hit. Waiting 125s... (Attempt ${attempts})`);
-          await delay(120000);
+          await delay(125000);
         } else {
           console.error(`Error: ${article.title}`, error.message);
           await delay(5000);
@@ -79,6 +79,6 @@ export async function selectAffiliate(summaries: any[], affiliates: any[], langu
     return { ...tool, recommendation: data.recommendation };
   } catch (error) {
     console.error("Affiliate selection error:", error);
-    return { ...affiliates[0], recommendation: "今週の注目チE�Eルをご紹介します、E };
+    return { ...affiliates[0], recommendation: "今週の注目ツールをご紹介します。" };
   }
 }
