@@ -1,0 +1,77 @@
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 笞呻ｸ・ load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 笞呻ｸ・ override existing env vars with { override: true }
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 笞｡・・secrets for agents: https://dotenvx.com/as2
+噫 Starting AI Sentinel...
+Fetching from OpenAI Blog...
+(node:20548) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Fetching from Google DeepMind...
+Fetching from TechCrunch AI...
+Fetching from Hugging Face...
+Found 5 new articles.
+Summarizing: Update on the OpenAI Foundation...
+Summarizing: Creating with Sora Safely...
+Error summarizing article: Update on the OpenAI Foundation GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeRequest (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async summarizeArticles (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\summarizer.ts:30:22)
+    at async main (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\index.ts:42:22) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Error summarizing article: Creating with Sora Safely GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Summarizing: How we monitor internal coding agents for misalignment...
+    at handleResponseNotOk (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeRequest (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async summarizeArticles (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\summarizer.ts:30:22)
+    at async main (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\index.ts:42:22) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Error summarizing article: How we monitor internal coding agents for misalignment GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeRequest (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+Summarizing: OpenAI to acquire Astral...
+    at async summarizeArticles (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\summarizer.ts:30:22)
+    at async main (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\index.ts:42:22) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Error summarizing article: OpenAI to acquire Astral GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Summarizing: OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first...
+    at handleResponseNotOk (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeRequest (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async summarizeArticles (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\summarizer.ts:30:22)
+    at async main (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\index.ts:42:22) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Error summarizing article: OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeRequest (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContent (file:///C:/Users/liang/.gemini/antigravity/playground/ai-sentinel/node_modules/@google/generative-ai/dist/index.mjs:865:22)
+    at async summarizeArticles (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\summarizer.ts:30:22)
+    at async main (C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\src\index.ts:42:22) {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+Newsletter generated at C:\Users\liang\.gemini\antigravity\playground\ai-sentinel\newsletter.html
+笞・・Beehiiv API key or Publication ID missing. Skipping publisher.
+頭 Sending to 1 subscribers...
+透 Sending email via Resend...
+笨・Email sent via Resend! ID: 2a42d634-e8fe-484f-a769-1f522404d3b8
+笨・AI Sentinel process complete!

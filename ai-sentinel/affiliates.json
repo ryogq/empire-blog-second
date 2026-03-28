@@ -1,0 +1,23 @@
+[
+  {
+    "id": "binance",
+    "name": "Binance (バイナンス)",
+    "url": "https://www.binance.com/",
+    "description": "世界最大級の仮想通貨取引所。圧倒的な銘柄数と低い手数料で、初心者から上級者まで仮想通貨投資の必須プラットフォームです。",
+    "category": "Crypto Exchange"
+  },
+  {
+    "id": "bybit",
+    "name": "Bybit (バイビット)",
+    "url": "https://www.bybit.com/",
+    "description": "使いやすさとサポートの厚さで人気の取引所。各種キャンペーンや高利回りのステーキングなど、資産運用に最適です。",
+    "category": "Crypto Exchange"
+  },
+  {
+    "id": "ledger",
+    "name": "Ledger Nano X",
+    "url": "https://shop.ledger.com/",
+    "description": "仮想通貨をハッキングから守る、世界で最も人気なハードウェアウォレット。あなたのデジタル資産を安全に保管します。",
+    "category": "Hardware Wallet"
+  }
+]

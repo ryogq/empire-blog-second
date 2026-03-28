@@ -1,0 +1,18 @@
+{
+  "niche": "仮想通貨・Web3トレンド",
+  "language": "ja",
+  "sources": [
+    {
+      "name": "CoinTelegraph",
+      "url": "https://cointelegraph.com/rss"
+    },
+    {
+      "name": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/feed/"
+    },
+    {
+      "name": "Decrypt",
+      "url": "https://decrypt.co/feed"
+    }
+  ]
+}

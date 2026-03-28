@@ -1,0 +1,118 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage, affiliate } = Astro.props;
+---
+
+<html lang="ja">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			.hero-image {
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 32px;
+				box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: var(--text-muted);
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+				font-size: 3.5rem;
+				background: linear-gradient(to right, #a855f7, #ec4899);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.date {
+				margin-bottom: 0.5em;
+				color: var(--text-muted);
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+			
+			/* Affiliate Card */
+			.affiliate-card {
+				background: rgba(168, 85, 247, 0.1);
+				border: 1px solid rgba(168, 85, 247, 0.3);
+				border-radius: 24px;
+				padding: 2.5rem;
+				margin-top: 4rem;
+				text-align: center;
+			}
+			.affiliate-card h3 {
+				color: white;
+				margin-bottom: 1rem;
+			}
+			.affiliate-btn {
+				display: inline-block;
+				margin-top: 1.5rem;
+				padding: 1rem 2rem;
+				background: linear-gradient(135deg, #a855f7, #ec4899);
+				color: white;
+				border-radius: 16px;
+				font-weight: 800;
+				text-decoration: none;
+				box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article class="prose">
+				<div class="hero-image">
+					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				</div>
+				<div class="title">
+					<div class="date">
+						<FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									最終更新日: <FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
+					</div>
+					<h1>{title}</h1>
+					<hr style="border-top: 1px solid var(--border); margin: 2rem 0;" />
+				</div>
+				<slot />
+
+				{affiliate && (
+					<div class="affiliate-card">
+						<span class="tag">AIセレクト</span>
+						<h3>🚀 今日の連動おすすめツール</h3>
+						<p>{affiliate.recommendation}</p>
+						<a href={affiliate.url} target="_blank" class="affiliate-btn">
+							{affiliate.name} を詳しく見る →
+						</a>
+					</div>
+				)}
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
