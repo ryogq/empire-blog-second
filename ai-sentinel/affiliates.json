@@ -4,20 +4,53 @@
     "name": "Binance (バイナンス)",
     "url": "https://www.binance.com/",
     "description": "世界最大級の仮想通貨取引所。圧倒的な銘柄数と低い手数料で、初心者から上級者まで仮想通貨投資の必須プラットフォームです。",
-    "category": "Crypto Exchange"
+    "category": "Crypto Exchange",
+    "genre": "Crypto & Investment",
+    "status": "active"
   },
   {
     "id": "bybit",
     "name": "Bybit (バイビット)",
     "url": "https://www.bybit.com/",
     "description": "使いやすさとサポートの厚さで人気の取引所。各種キャンペーンや高利回りのステーキングなど、資産運用に最適です。",
-    "category": "Crypto Exchange"
+    "category": "Crypto Exchange",
+    "genre": "Crypto & Investment",
+    "status": "active"
   },
   {
     "id": "ledger",
     "name": "Ledger Nano X",
     "url": "https://shop.ledger.com/",
     "description": "仮想通貨をハッキングから守る、世界で最も人気なハードウェアウォレット。あなたのデジタル資産を安全に保管します。",
-    "category": "Hardware Wallet"
+    "category": "Hardware Wallet",
+    "genre": "Crypto & Investment",
+    "status": "active"
+  },
+  {
+    "id": "dmm_fx",
+    "name": "DMM FX",
+    "url": "https://px.a8.net/svt/ejp?a8mat=4AZQGS+3QJZHU+1WP2+6JC82",
+    "description": "口座開設数ナンバーワンのFXサービス。初心者でも使いやすいツールと、最大50万円のキャッシュバックが魅力です。最短5分で申し込み完了。",
+    "category": "FX & Investment",
+    "genre": "Crypto & Investment",
+    "status": "active"
+  },
+  {
+    "id": "coincheck",
+    "name": "Coincheck（コインチェック）",
+    "url": "https://coincheck.com/ja/",
+    "description": "国内最大級の取り扱い銘柄数を誇る暗号資産取引所。ビットコインをはじめとする多様な仮想通貨を簡単に取引できます。",
+    "category": "暗号資産取引所",
+    "genre": "Crypto & Investment",
+    "status": "active"
+  },
+  {
+    "id": "bitflyer",
+    "name": "bitFlyer (ビットフライヤー)",
+    "url": "https://bitflyer.com/ja-jp/",
+    "description": "国内最大級の仮想通貨取引所。使いやすいアプリと高いセキュリティが特徴です。ビットコイン取引量6年連続No.1！",
+    "category": "Crypto Exchange",
+    "genre": "Crypto & Investment",
+    "status": "active"
   }
 ]
